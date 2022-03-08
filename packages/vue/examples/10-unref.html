@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">xxx</div>
+<script src="../dist/vue.global.js"></script>
+<script>
+  const {createApp, toRaw, unref, ref} = Vue;
+  createApp({
+    data(){
+      return {
+        data:'xxx'
+      }
+    },
+    setup() {
+      const a = ref('a');
+      const b = unref(a);
+      console.log(b)
+    }
+  }).mount('#app')
+</script>
+</body>
+</html>
